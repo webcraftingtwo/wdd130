@@ -40,13 +40,14 @@ main img {
   height: auto;
   border: 1px solid black;
   padding: 10px;
-  box-shadow: 5px 10px 10px 2px rgb(0 0 0 / 0.5);
+  box-shadow: 0 0 30px gray;
 }
 footer  {
   margin-top: 15px;
   border-top: 1px solid  #000;
   text-align: center;
 }
+
 
 
 
