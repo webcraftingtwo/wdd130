@@ -45,6 +45,8 @@ aside img {
 
 aside h2 {
   position: absolute;
+  top: 65px;
+  left: 100px;
 }
 
 main img {
@@ -71,6 +73,7 @@ footer  {
   background-color: gray;
   color: black;
 }
+
 
 
 
