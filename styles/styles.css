@@ -28,10 +28,14 @@ main {
 aside {
   width: 20rem;
   text-align: center;
+  position: relative;
 }
 aside img {
   width: 200px;
   height: auto;
+}
+aside h2 {
+  position: absolute;
 }
 main img {
   width: 150px;
@@ -57,6 +61,7 @@ footer  {
   background-color: #eee;
   color: #000;
 }
+
 
 
 
