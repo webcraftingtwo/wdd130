@@ -1,3 +1,4 @@
+
 * {
   margin: 0
 }
@@ -80,8 +81,9 @@ footer  {
   color: black;
 }
 .indent {
-  padding-left: 1rem;
+  padding-left: 2rem;
 }
+
 
 
 
