@@ -52,7 +52,7 @@ aside img {
 
 aside h2 {
   position: absolute;
-  top: 60px;
+  top: 50px;
   left: 150px;
 }
 
@@ -83,6 +83,7 @@ footer  {
 .indent {
   padding-left: 2rem;
 }
+
 
 
 
