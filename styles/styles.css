@@ -1,6 +1,8 @@
 
 * {
-  margin: 0
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
@@ -53,7 +55,7 @@ aside img {
 
 aside h2 {
   position: absolute;
-  top: 50px;
+  top: 45px;
   left: 150px;
 }
 
@@ -84,6 +86,7 @@ footer  {
 .indent {
   padding-left: 2rem;
 }
+
 
 
 
