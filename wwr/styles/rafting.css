@@ -1,1 +1,84 @@
 
+:root {
+  --primary-color: #2F4858;
+  --secondary-color: #F6AE2D;
+  --accent1-color: #33658A;
+  --text-color: #2F4858;
+  --bg-color: #F0F4F8;
+  --body-font: "Arial", sans-serif; 
+  --heading-font: "Verdana", sans-serif;
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--body-font);
+  color: var(--text-color);
+  background-color: var(--bg-color);
+}
+
+header, main, footer {
+  width: 840px;
+  margin: 0 auto;
+}
+
+
+h1, h2, h3 {
+    font-family: var(--heading-font);
+    color: var(--primary-color);
+}
+
+
+nav, p, section, article {
+    margin: 16px;
+    padding: 8px;
+}
+
+.socialmedia a {
+    text-decoration: none;
+}
+/* 1. Set parent to relative so children stay inside it */
+.hero {
+  position: relative;
+}
+
+/* 2. Make the background image responsive and full width */
+.hero img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* 3. Position the H1 title on top of the image */
+.hero h1 {
+  position: absolute;
+  top: 20px;
+  width: 100%;
+  padding: 16px;
+  text-align: center;
+  opacity: 0.8;
+  background-color: var(--bg-color); /* Using our variable */
+  color: var(--primary-color);
+}
+
+/* 4. Position the article (the text box overlay) */
+.hero article {
+  position: absolute;
+  bottom: 10px; /* Positions it near the bottom */
+  right: 10px;  /* Positions it near the right */
+  width: 80%;   /* Makes it take up most of the width */
+  background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white */
+  padding: 1rem;
+}
+
+/* 5. Float the small image inside the article to the right */
+.hero article img {
+  float: right;
+  width: 125px;
+  margin-left: 10px; /* Adds space between text and image */
+}
