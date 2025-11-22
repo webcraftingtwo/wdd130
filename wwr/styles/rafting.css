@@ -37,18 +37,10 @@ nav ul li a {
     list-style: none;
 }
 
-.social-icon svg {
-    width: 40px; /* Constraints the size */
-    height: 40px;
-    fill: white; /* Makes the icon white if the background is dark */
-}
-
-
 h1, h2 {
     font-family: var(--heading-font);
     color: var(--primary-color);
 }
-
 
 nav, p, section, article {
     margin: 16px;
