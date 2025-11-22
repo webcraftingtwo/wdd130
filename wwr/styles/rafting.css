@@ -28,10 +28,18 @@ header, main, footer {
   width: 840px;
   margin: 0 auto;
 }
-nav {
-  text-decoration: none;
-  
+nav ul li a {
+    color: white; /* Fixes the contrast issue */
+    text-decoration: none; /* Removes underline */
+    font-family: var(--heading-font);
 }
+
+.social-icon svg {
+    width: 40px; /* Constraints the size */
+    height: 40px;
+    fill: white; /* Makes the icon white if the background is dark */
+}
+
 
 h1, h2 {
     font-family: var(--heading-font);
