@@ -1,8 +1,8 @@
 
 :root {
   --primary-color: #2F4858;
-  /*--secondary-color: #F6AE2D;
-  --accent1-color: #33658A;*/
+  --accent1-color: #F6AE2D;
+  --accent2-color: #33658A;
   --text-color: #2F4858;
   --bg-color: #F0F4F8;
   --body-font: "Arial", sans-serif; 
@@ -21,7 +21,10 @@ body {
   color: var(--text-color);
   background-color: var(--bg-color);
 }
-
+header {
+  background-color: var(--primary-color);
+  color: var(--accent2-color);
+}
 header, main, footer {
   width: 840px;
   margin: 0 auto;
