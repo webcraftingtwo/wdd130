@@ -28,7 +28,10 @@ header, main, footer {
   width: 840px;
   margin: 0 auto;
 }
-
+nav {
+  text-decoration: none;
+  
+}
 
 h1, h2 {
     font-family: var(--heading-font);
@@ -43,7 +46,7 @@ nav, p, section, article {
 
 .socialmedia a {
     text-decoration: none;
-    display: inline;
+    display: block;
     width: 24px;
     height:24px;
 }
