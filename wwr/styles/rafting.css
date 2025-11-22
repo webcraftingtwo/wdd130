@@ -46,8 +46,6 @@ nav, p, section, article {
 }
 
 .socialmedia a {
-    text-decoration: none;
-    display: flex;
     gap: 15px;
     width: 24px;
     height:24px;
