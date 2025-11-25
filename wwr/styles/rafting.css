@@ -49,6 +49,7 @@ nav, p, section, article {
     gap: 15px;
     width: 24px;
     height:24px;
+  
 }
 /* 1. Set parent to relative so children stay inside it */
 .hero {
