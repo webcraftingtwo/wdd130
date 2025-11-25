@@ -44,6 +44,7 @@ nav, p, section, article {
 }
 
 .socialmedia a {
+    display:flex;
     gap: 15px;
     width: 24px;
     height:24px;
