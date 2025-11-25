@@ -27,7 +27,7 @@ header, main, footer {
   width: 840px;
   margin: 0 auto;
 }
-nav ul li a {
+nav ,ul ,li, a {
     color: white; /* Fixes the contrast issue */
     text-decoration: none; /* Removes underline */
     font-family: var(--heading-font);
@@ -46,11 +46,10 @@ nav, p, section, article {
 }
 
 .socialmedia a {
-    text-decoration: none;
     gap: 15px;
     width: 24px;
     height:24px;
-  
+    list-style: none;
 }
 /* 1. Set parent to relative so children stay inside it */
 .hero {
@@ -65,7 +64,7 @@ nav, p, section, article {
 }
 
 /* 3. Position the H1 title on top of the image */
-.hero h1 {
+h1 {
   position: absolute;
   top: 20px;
   width: 100%;
