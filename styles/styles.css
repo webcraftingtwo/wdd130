@@ -31,6 +31,7 @@ h1 {
   color: darkblue;
   padding: .5rem;
   border-bottom: 2px solid darkblue;
+  display: inline-block;
 }
 
 img {
@@ -105,6 +106,7 @@ main {
   grid-column: 2/3;
   margin: 1rem;
 }
+
 
 
 
