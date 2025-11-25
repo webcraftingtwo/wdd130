@@ -29,7 +29,6 @@ nav ,ul ,li, a {
     color:  accent1-color;
     text-decoration: none; 
     font-family: var(--heading-font);
-    display: flex;
     list-style: none;
 }
 
