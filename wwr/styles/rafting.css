@@ -18,14 +18,12 @@ body {
   font-family: var(--body-font);
   color: var(--accent1-color);
 }
-header {
-  color: var(--accent2-color);
-  background-color: var(--secondary-color);
-}
 
 header, main, footer {
   width: 840px;
   margin: 0 auto;
+  color: var(--accent2-color);
+  background-color: var(--secondary-color);
 }
 nav ,ul ,li, a {
     color:  accent1-color;
