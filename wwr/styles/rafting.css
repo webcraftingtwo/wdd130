@@ -50,6 +50,7 @@ nav, p, section, article {
     width: 24px;
     height:24px;
     list-style: none;
+    text-decoration: none;
 }
 /* 1. Set parent to relative so children stay inside it */
 .hero {
