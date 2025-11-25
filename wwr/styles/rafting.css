@@ -66,9 +66,9 @@ h1 {
   width: 100%;
   padding: 16px;
   text-align: center;
-  opacity: 0.8;
-  background-color: var(--bg-color); /* Using our variable */
-  color: var(--primary-color);
+  opacity: 0.7;
+  background-color: var(--accent1-color); /* Using our variable */
+  color: #fff;
 }
 
 /* 4. Position the article (the text box overlay) */
