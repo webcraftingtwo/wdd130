@@ -1,9 +1,9 @@
 
 :root {
-  --primary-color: black;
-  --accent2-color: yellow;
-  --text-color: #2F4858;
-  --bg-color: #F0F4F8;
+  --primary-color: #055a05; /* forest green */
+  --secondary-color: #f4a261; /* warm sand */
+  --accent1-color: #264653; /* dark slate blue */
+  --accent2-color: #F0F4F8;
   --body-font: "Arial", sans-serif; 
   --heading-font: "Verdana", sans-serif;
 }
@@ -16,20 +16,16 @@
 
 body {
   font-family: var(--body-font);
-  color: var(--text-color);
-  background-color: var(--bg-color);
+  color: var(--accent1-color);
 }
-header {
-  background-color: var(--primary-color);
-  color: var(--accent2-color);
-}
+
 header, main, footer {
   width: 840px;
   margin: 0 auto;
 }
 nav ,ul ,li, a {
-    color: white; /* Fixes the contrast issue */
-    text-decoration: none; /* Removes underline */
+    color: white; 
+    text-decoration: none; 
     font-family: var(--heading-font);
     display: flex;
     list-style: none;
@@ -49,7 +45,6 @@ nav, p, section, article {
     gap: 15px;
     width: 24px;
     height:24px;
-    list-style: none;
     text-decoration: none;
 }
 /* 1. Set parent to relative so children stay inside it */
