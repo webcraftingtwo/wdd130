@@ -1,6 +1,6 @@
 
 :root {
-  --primary-color: #fff;
+  --primary-color: black;
   --accent2-color: yellow;
   --text-color: #2F4858;
   --bg-color: #F0F4F8;
@@ -46,6 +46,7 @@ nav, p, section, article {
 }
 
 .socialmedia a {
+    text-decoration: none;
     gap: 15px;
     width: 24px;
     height:24px;
