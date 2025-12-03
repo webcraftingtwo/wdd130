@@ -14,10 +14,21 @@
         <label for="fullname">Full Name:</label>
         <input type="text" id="fullname" name="fullname" required>
         <label for="useremail"  id="useremail" name="useremail" required>Email:</label>
-        <label for="quantity">Select Quantity</label>
-        <Select name="quantity" id="quantity">
-          <option value="1">one</option>
+        <label for="browser">What is your favourite internet browser?</label>
+        <Select name="browser" id="browser">
+          <option value="chrome">Chrome</option>
+          <option value="firefox">Firefox</option>
+          <option value="edge">Edge</option>
+          <option value="brave">Brave</option>
+          <option value="other">Other</option>
+        </Select>
+        <label for="pet">Do you have a household pet?</label>
+        <input type="checkbox" id="pet" name="pet">
+        <label for="feedback">List the places you've lived</label>
+        <textarea id="feedback" name="feedback" rows="4" placeholder="Mkoba Gweru, Kambuzuma Harare, Gumbodzvanda Bushu"></textarea>
+
       </form> 
+      <button type="submit">Submit Poll</button>
     </main>
     <footer>
       
