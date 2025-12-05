@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Good Trips Rafting</title>
+    <meta name="description" content="Contact the Good Trips Water Rafting Company for reservations, general inquiries, or website suggestions">
+    <meta name="author" content="Tanatswa Mbewe">
+    <!-- Links to your separate CSS file. Ensure this path matches your folder structure -->
+    <link rel="stylesheet" href="styles/rafting.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="images/logo.png" alt="Rafting Site Logo">
+        </div>
+        <nav>
+            <ul class="navigation">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="trips.html">Trips</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Company Information Section -->
+        <div class="company-info">
+            <h1>Good Trips water Rafting Company</h1>
+            <address>
+                6353 Mkoba 18<br>
+                Gweru, Zimbabwe<br>
+                Phone: +263 784 402 114<br>
+                Email: <a href="mailto:info@whitewater.com">info@whitewater.com</a>
+            </address>
+        </div>
+
+        <!-- Grid Layout for Map and Form -->
+        <div class="contact-grid">
+            
+            <!-- Left Column: Google Map -->
+            <div class="map-container">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3118.636666874836!2d-120.8872046846559!3d38.8021469795851!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x809a5f08d27376e9%3A0x7940b27b34b67b1e!2sSutter's%20Mill!5e0!3m2!1sen!2sus!4v1646765432101!5m2!1sen!2sus" 
+                    width="100%" 
+                    height="350" 
+                    allowfullscreen="" 
+                    loading="lazy"
+                    title="Google Map of Rafting Location">
+                </iframe>
+            </div>
+
+            <!-- Right Column: Contact Form -->
+            <form action="#" method="get" class="contact-form">
+                <h2>Send Us a Message</h2>
+                
+                <div class="form-item">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" placeholder="Your full name" required>
+                </div>
+
+                <div class="form-item">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="example@email.com" required>
+                </div>
+
+                <div class="form-item">
+                    <p class="label-text">Purpose of Message:</p>
+                    <div class="radio-group">
+                        <label><input type="radio" name="purpose" value="general" checked> General Inquiry</label>
+                        <label><input type="radio" name="purpose" value="reservation"> Reservation Question</label>
+                        <label><input type="radio" name="purpose" value="suggestion"> Website Suggestion</label>
+                    </div>
+                </div>
+
+                <div class="form-item">
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="5" placeholder="Type your message here..." required></textarea>
+                </div>
+
+                <div class="form-item checkbox-container">
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="newsletter" value="yes"> 
+                        Please subscribe me to the monthly newsletter
+                    </label>
+                </div>
+
+                <button type="submit" class="submit-btn">Get in Touch!</button>
+            </form>
+        </div>
+
+        <!-- Employee Section -->
+        <section class="employees">
+            <h2>We Are Here to Serve You</h2>
+            <div class="employee-row">
+                <figure>
+                    <img src="images/employee1.jpg" alt="Portrait of Jim, a river guide">
+                    <figcaption>Tonde- River Guide</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/employee2.jpg" alt="Portrait of Sarah, the office manager">
+                    <figcaption>Sarah - Office Manager</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/employee3.jpg" alt="Portrait of Mike, a safety instructor">
+                    <figcaption>Dube - Safety Instructor</figcaption>
+                </figure>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Good Trips Rafting</p>
+        <p><a href="site-plan.html">Site Plan</a></p>
+        <div class="sociallinks">
+            <a href="https://facebook.com" target="_blank">
+                <img src="images/facebook.png" alt="Facebook">
+            </a>
+            <a href="https://twitter.com" target="_blank">
+                <img src="images/twitter.png" alt="Twitter">
+            </a>
+            <a href="https://instagram.com" target="_blank">
+                <img src="images/instagram.png" alt="Instagram">
+            </a>
+        </div>
+    </footer>
+</body>
+</html>
+
+
