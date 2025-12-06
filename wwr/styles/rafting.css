@@ -275,7 +275,8 @@ h1 {
     font-weight: bold;
     font-size: 1.1rem;
     color: #333;
-      }
+}
+
 nav a {
     text-decoration: none;
     font-weight: bold;
@@ -302,7 +303,7 @@ header img {
 }
 
 /* 4. Center the Title explicitly */
-header h1 {
+.hero h1 {
     text-align: center;
     margin: 0; /* Remove default margins that might push it down */
     width: 100%;
