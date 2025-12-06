@@ -71,7 +71,6 @@ nav, p, section, article {
 
 /* 3. Position the H1 title on top of the image */
 h1 {
-  position: absolute;
   top: 20px;
   width: 100%;
   padding: 16px;
@@ -303,7 +302,7 @@ header img {
 }
 
 /* 4. Center the Title explicitly */
-.hero h1 {
+.company-info h1{
     text-align: center;
     margin: 0; /* Remove default margins that might push it down */
     width: 100%;
