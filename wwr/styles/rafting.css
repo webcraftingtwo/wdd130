@@ -2,7 +2,7 @@
 :root {
   --primary-color: #055a05; /* forest green */
   --secondary-color: #f4a261; /* warm sand */
-  --accent1-color: #000080; 
+  --accent1-color: #0000FF,
   --accent2-color: black;
   --body-font: "Arial", sans-serif; 
   --heading-font: "Verdana", sans-serif;
@@ -39,7 +39,8 @@ nav ,ul ,li, a {
     list-style: none;
 }
 
-h1, h2 {
+h1, h2 { 
+  
     font-family: var(--heading-font);
     color: var(--primary-color);
     text-align: center;
