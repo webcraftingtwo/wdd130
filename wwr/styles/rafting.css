@@ -2,7 +2,7 @@
 :root {
   --primary-color: #055a05; /* forest green */
   --secondary-color: #f4a261; /* warm sand */
-  --accent1-color: blue; 
+  --accent1-color: #000080; 
   --accent2-color: black;
   --body-font: "Arial", sans-serif; 
   --heading-font: "Verdana", sans-serif;
