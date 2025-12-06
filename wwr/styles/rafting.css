@@ -306,6 +306,4 @@ header img {
     width: 100%;
     position: static;
 }
-.map-container iframe {
-    width: 100%;  /* This handles the width correctly! */
-}
+
