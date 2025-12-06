@@ -25,6 +25,13 @@ header, main, footer {
   color: var(--accent2-color);
   background-color: var(--secondary-color);
 }
+nav ul {
+  display: flex; /*makes lists items sit side by side*/
+}
+nav li {
+  margin-left: 20px; /* Adds space between links*/  
+}
+
 nav ,ul ,li, a {
     color:  accent1-color;
     text-decoration: none; 
@@ -71,6 +78,8 @@ h1 {
   opacity: 0.7;
   background-color: var(--accent1-color); /* Using our variable */
   color: #fff;
+  width: 100%;
+  text-align: center;
 }
 
 /* 4. Position the article (the text box overlay) */
