@@ -307,4 +307,5 @@ header img {
     text-align: center;
     margin: 0; /* Remove default margins that might push it down */
     width: 100%;
+    position: static;
 }
