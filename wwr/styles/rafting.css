@@ -276,3 +276,34 @@ h1 {
     font-size: 1.1rem;
     color: #333;
       }
+nav a {
+    text-decoration: none;
+    font-weight: bold;
+    /* Optional: make them look like buttons or clean links */
+    color: var(--primary-color); 
+}
+
+/* 2. Fix the Header Layout (The Grid) */
+header {
+    display: grid;
+    /* This creates 3 columns: Logo space, Title space, and Nav space */
+    /* The '1fr' in the middle allows the title to take up the most room */
+    grid-template-columns: auto 1fr auto; 
+    align-items: center;  /* Vertically centers items */
+    padding: 1rem;
+    background-color: var(--secondary-color); /* Or your preferred header color */
+    border-bottom: 1px solid #ccc;
+}
+
+/* 3. Ensure the Logo stays small */
+header img {
+    max-width: 80px; /* Prevents logo from pushing everything over */
+    height: auto;
+}
+
+/* 4. Center the Title explicitly */
+header h1 {
+    text-align: center;
+    margin: 0; /* Remove default margins that might push it down */
+    width: 100%;
+}
