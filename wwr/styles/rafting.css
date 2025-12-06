@@ -2,7 +2,7 @@
 :root {
   --primary-color: #055a05; /* forest green */
   --secondary-color: #f4a261; /* warm sand */
-  --accent1-color: #0000FF,
+  --accent1-color: #0000FF;
   --accent2-color: black;
   --body-font: "Arial", sans-serif; 
   --heading-font: "Verdana", sans-serif;
@@ -151,7 +151,7 @@ h1 {
 .contact-form h2 {
     margin-top: 0;
     margin-bottom: 1.5rem;
-    color: var(--primary-color); /* Assumes you have this var set */
+    color: var(--primary-color); /
     border-bottom: 2px solid #ccc;
     padding-bottom: 10px;
 }
