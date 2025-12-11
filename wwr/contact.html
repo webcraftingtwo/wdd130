@@ -3,116 +3,95 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us | Good Trips Rafting</title>
-    <meta name="description" content="Contact the Good Trips Water Rafting Company for reservations, general inquiries, or website suggestions">
+    <meta name="description" content="Contact Good Trips Rafting to book your next adventure. Reach out for reservations, questions, or website suggestions.">
     <meta name="author" content="Tanatswa Mbewe">
-    <!-- Links to your separate CSS file. Ensure this path matches your folder structure -->
-    <link rel="stylesheet" href="styles/rafting.css">
+    <title>Contact Us | Good Trips Rafting</title>
+    <link rel="stylesheet" href="rafting.css">
 </head>
 <body>
     <header>
-        <div class="logo">
-            <img src="images/z-raftingcompas.jpg" alt="Rafting Site Logo">
-        </div>
+        <img src="images/style00.jpg" alt="Good Trips logo">
         <nav>
-            <ul class="navigation">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="trips.html">Trips</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
-            </ul>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="trips.html">Trips</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
         </nav>
     </header>
 
-    <main>
-        <!-- Company Information Section -->
-        <div class="company-info">
-            <h1>Good Trips Rafting</h1>
-            <address>
-                6353 Mkoba 18<br>
-                Gweru, Zimbabwe<br>
-                Phone: +263 784 402 114<br>
-                Email: <a href="mailto:info@whitewater.com">info@whitewater.com</a>
-            </address>
-        </div>
-
-        <!-- Grid Layout for Map and Form -->
+    <    <main>
+        <h1 style="position: static; background: none; color: var(--primary-color); padding: 20px;">Contact Us</h1>
+        
         <div class="contact-grid">
             
-            <!-- Left Column: Google Map -->
-            <div class="map-container">
-                <iframe 
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3118.636666874836!2d-120.8872046846559!3d38.8021469795851!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x809a5f08d27376e9%3A0x7940b27b34b67b1e!2sSutter's%20Mill!5e0!3m2!1sen!2sus!4v1646765432101!5m2!1sen!2sus" 
-                    height="350" 
-                    allowfullscreen="" 
-                    loading="lazy"
-                    title="Google Map of Rafting Location">
-                </iframe>
-            </div>
-
-            <!-- Right Column: Contact Form -->
-            <form action="#" method="get" class="contact-form">
-                <h2>Send Us a Message</h2>
+            <section class="company-info">
+                <h2>Get in Touch</h2>
+                <address>
+                    Good Trips Rafting<br>
+                    Mkoba, Gweru<br>
+                    Zimbabwe<br><br>
+                    📞 <a href="tel:+263770000000">+263 77 000 0000</a><br>
+                    📧 <a href="mailto:info@goodtrips.co.zw">info@goodtrips.co.zw</a>
+                </address>
                 
-                <div class="form-item">
-                    <label for="name">Name:</label>
-                    <input type="text" id="name" name="name" placeholder="Your full name" required>
+                <div class="map-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3797.807759882204!2d29.81434131481546!3d-19.45833398687255!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1931a5db6b099303%3A0x6006093259960c0!2sGweru%2C%20Zimbabwe!5e0!3m2!1sen!2sus!4v1675718290123!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
+            </section>
 
-                <div class="form-item">
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" placeholder="example@email.com" required>
-                </div>
+            <section class="contact-form-section">
+                <h2>Send Us a Message</h2>
+                <form action="#" method="get">
+                    <label for="username">Your Name:</label>
+                    <input type="text" id="username" name="username" required>
 
-                <div class="form-item">
-                    <p class="label-text">Purpose of Message:</p>
-                    <div class="radio-group">
-                        <label><input type="radio" name="purpose" id="purposeg" value="general" checked> General Inquiry</label>
-                        <label><input type="radio" name="purpose" id="purposer" value="reservation"> Reservation Question</label>
-                        <label><input type="radio" name="purpose" id="purposes" value="suggestion"> Website Suggestion</label>
-                    </div>
-                </div>
+                    <label for="useremail">Your Email:</label>
+                    <input type="email" id="useremail" name="useremail" required>
 
-                <div class="form-item">
-                    <label for="message">Message:</label>
-                    <textarea id="message" name="message" rows="5" placeholder="Type your message here..." required></textarea>
-                </div>
+                    <fieldset>
+                        <legend>Purpose of Message:</legend>
+                        <label class="radio-label"><input type="radio" name="subject" value="general" checked> General Inquiry</label>
+                        <label class="radio-label"><input type="radio" name="subject" value="reservation"> Reservation Question</label>
+                        <label class="radio-label"><input type="radio" name="subject" value="suggestion"> Website Suggestion</label>
+                    </fieldset>
 
-                <div class="form-item checkbox-container">
+                    <label for="usermessage">Message:</label>
+                    <textarea id="usermessage" name="usermessage" rows="5" required></textarea>
+
                     <label class="checkbox-label">
-                        <input type="checkbox" id="newsletter" name="newsletter" value="yes"> 
-                        Please subscribe me to the monthly newsletter
+                        <input type="checkbox" name="newsletter"> Please subscribe me to the monthly newsletter
                     </label>
-                </div>
 
-                <button type="submit" class="submit-btn">Get in Touch!</button>
-            </form>
+                    <button type="submit">Get in Touch!</button>
+                </form>
+            </section>
         </div>
 
-        <!-- Employee Section -->
         <section class="employees">
             <h2>We Are Here to Serve You</h2>
             <div class="employee-row">
                 <figure>
-                    <img src="images/employee1.jpeg" alt="Portrait of Tonde, a river guide">
-                    <figcaption>Tonde- River Guide</figcaption>
+                    <img src="images/employee1.jpg" alt="Tinashe">
+                    <figcaption>Tinashe - Lead Guide</figcaption>
                 </figure>
                 <figure>
-                    <img src="images/employee2.jpeg" alt="Portrait of Dube, the office manager">
-                    <figcaption>Dube - Office Manager</figcaption>
+                    <img src="images/employee2.jpg" alt="Sarah">
+                    <figcaption>Sarah - Safety Officer</figcaption>
                 </figure>
                 <figure>
-                    <img src="images/employee3.jpeg" alt="Portrait of Sarah, a safety instructor">
-                    <figcaption>Sarah - Safety Instructor</figcaption>
+                    <img src="images/employee3.jpg" alt="David">
+                    <figcaption>David - Operations</figcaption>
                 </figure>
             </div>
         </section>
 
     </main>
 
-    
+ 
     <footer>
-      <p>©2025. Good Trips Rafting. Tanatswa Mbewe</p>
+      <p>©2025 Good Trips Rafting | Tanatswa Mbewe</p>
       <nav class="socialmedia">
           <ul>
             <li><a href="https://facebook.com"><img src="images/facebook-bw.svg" alt="facebook logo"></a></li>
@@ -123,5 +102,3 @@
     </footer>
 </body>
 </html>
-
-
