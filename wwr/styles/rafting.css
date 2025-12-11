@@ -1,15 +1,13 @@
 :root {
-  --primary-color: #055055;  /* Forest Green */
-  --secondary-color: #E0AE05; /* Warm Sand/Orange */
-  --accent1-color: #38405D;   /* Dark Slate Blue */
-  --accent2-color: #ffffff;   /* White */
-  --text-color: #333333;
-  --bg-color: #ffffff;
-
-  --heading-font: 'Verdana', sans-serif;
-  --body-font: 'Arial', sans-serif;
+  --primary-color: #055a05; /* forest green */
+  --secondary-color: #f4a261; /* warm sand */
+  --accent1-color: #264653; /* dark slate blue */
+  --accent2-color: black;
+  --body-font: "Arial", sans-serif; 
+  --heading-font: "Verdana", sans-serif;
 }
 
+/* --- Global Reset & Basics --- */
 * {
   margin: 0;
   padding: 0;
@@ -18,766 +16,462 @@
 
 body {
   font-family: var(--body-font);
-  color: var(--text-color);
-  background-color: var(--bg-color);
+  color: var(--accent1-color);
+  background-color: #fff;
 }
 
-/* ========================================= */
-/* HEADER & NAVIGATION                      */
-/* ========================================= */
+img {
+    max-width: 100%; /* Critical for mobile responsiveness */
+    height: auto;
+}
+
+/* --- Mobile Layout (Default) --- */
+/* By default, containers take 100% width */
+header, main, footer {
+  width: 100%;
+  margin: 0 auto; 
+  background-color: var(--secondary-color);
+}
 
 header {
-  display: grid;
-  grid-template-columns: auto 1fr auto; /* Logo, Title, Nav */
-  align-items: center;
-  padding: 1rem;
-  background-color: var(--accent1-color); /* Used accent color for header based on your image */
-  border-bottom: 2px solid var(--secondary-color);
-}
-
-header img {
-  max-width: 80px;
-  height: auto;
-  border-radius: 5px;
-}
-
-/* FIX: Ensure Header Title is normal (Static) */
-header h1 {
-  position: static;
-  transform: none;
-  text-align: center;
-  margin: 0;
-  width: 100%;
-  color: var(--secondary-color); /* Orange text for contrast */
-  font-family: var(--heading-font);
-}
-
-nav ul {
-  display: flex; /* Makes links horizontal */
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-nav li {
-  margin-left: 20px;
-}
-
-nav a {
-  text-decoration: none;
-  font-weight: bold;
-  color: var(--secondary-color); /* Orange links */
-  font-family: var(--heading-font);
-  transition: color 0.3s;
-}
-
-nav a:hover {
-  color: white;
-  text-decoration: underline;
-}
-
-/* ========================================= */
-/* MAIN LAYOUT                              */
-/* ========================================= */
-
-main {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0; /* Removed padding to let Hero image go full width */
-}
-
-h1, h2, h3 {
-  font-family: var(--heading-font);
-  color: var(--primary-color);
-}
-
-p {
-  line-height: 1.5;
-  margin-bottom: 1rem;
-}
-
-/* ========================================= */
-/* HERO SECTION (Home Page)                 */
-/* ========================================= */
-
-.hero {
-  position: relative;
-  width: 100%;
-}
-
-.hero img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-/* FIX: Centered Text Over Hero Image */
-.hero h1 {
-  position: absolute;
-  top: 50%;
-  left: 0;
-  width: 100%;
-  transform: translateY(-50%); /* Pulls it up by half its height to center vertically */
-  text-align: center;
-  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent box */
-  color: white;
-  margin: 0;
-  padding: 1rem 0;
-  font-size: 2.5rem;
-  z-index: 10;
-}
-
-.hero article {
-    /* If you use an article tag with text inside, style it here */
-    position: absolute;
-    bottom: 10px;
-    right: 10px;
-    background-color: rgba(255, 255, 255, 0.8);
-    padding: 1rem;
-    max-width: 300px;
-}
-
-.hero article img {
-    float: right;
-    width: 100px;
-    margin-left: 10px;
-}
-
-/* ========================================= */
-/* HOME PAGE GRID & SECTIONS                */
-/* ========================================= */
-
-.call-to-action {
-  text-align: center;
-  margin: 3rem 0;
-  padding: 2rem;
-  background-color: #f4f4f4;
-}
-
-.cta-btn {
-  display: inline-block;
-  background-color: var(--primary-color);
-  color: white;
-  padding: 15px 30px;
-  text-decoration: none;
-  font-weight: bold;
-  border-radius: 5px;
-  margin-top: 1rem;
-}
-
-.cta-btn:hover {
-  background-color: var(--accent1-color);
-}
-
-.home-grid {
-  display: grid;
-  grid-template-columns: 1fr; /* Mobile first */
-  gap: 20px;
-  margin: 2rem 20px;
-}
-
-.grid-item {
-  text-align: center;
-  border: 1px solid #ddd;
-  padding: 1rem;
-  border-radius: 5px;
-}
-
-.grid-item img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-  border-radius: 5px;
-}
-
-.newsletter {
-  background-color: var(--primary-color);
-  color: white;
-  padding: 2rem;
-  text-align: center;
-  margin-top: 2rem;
-}
-
-.newsletter-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 10px;
-  margin-top: 1rem;
-}
-
-.newsletter input {
-  padding: 10px;
-  border: none;
-  border-radius: 4px;
-}
-
-.newsletter button {
-  padding: 10px 20px;
-  border: none;
-  background-color: var(--secondary-color);
-  color: #333;
-  font-weight: bold;
-  cursor: pointer;
-  border-radius: 4px;
-}
-
-/* ========================================= */
-/* CONTACT PAGE STYLES                      */
-/* ========================================= */
-
-.company-info {
-  text-align: center;
-  margin: 2rem 0;
-  border-bottom: 1px solid #ccc;
-  padding-bottom: 1rem;
-}
-
-.contact-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 2rem;
-  margin: 2rem 20px;
-}
-
-.map-container iframe {
-  width: 100%; /* Fixes the Nu Validator "100%" error */
-  height: 350px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-}
-
-.contact-form {
-  background-color: #f9f9f9;
-  padding: 2rem;
-  border-radius: 8px;
-  border: 1px solid #eee;
-}
-
-.contact-form input[type="text"],
-.contact-form input[type="email"],
-.contact-form textarea {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 1rem;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-}
-
-.contact-form button {
-  width: 100%;
-  padding: 10px;
-  background-color: var(--secondary-color);
-  border: none;
-  color: white;
-  font-weight: bold;
-  cursor: pointer;
-  border-radius: 4px;
-}
-
-.employees {
-  background-color: #eee;
-  padding: 3rem 1rem;
-  text-align: center;
-  margin-top: 2rem;
-}
-
-.employee-row {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 2rem;
-}
-
-.employees figure {
-  background: white;
-  padding: 1rem;
-  border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-
-.employees img {
-    width: 150px;
-    height: 150px;
-    object-fit: cover;
-    border-radius: 50%;
-}
-
-/* ========================================= */
-/* TRIPS PAGE STYLES                        */
-/* ========================================= */
-
-.trip-descriptions {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 30px;
-  padding: 0 20px;
-  margin: 2rem 0;
-}
-
-.trip-card {
-  border: 1px solid #ccc;
-  padding: 15px;
-  text-align: center;
-  border-radius: 8px;
-}
-
-.trip-card img {
-  width: 100%;
-  height: 250px;
-  object-fit: cover;
-  margin-bottom: 1rem;
-}
-
-table {
-  width: 90%;
-  margin: 2rem auto;
-  border-collapse: collapse;
-}
-
-th, td {
-  padding: 12px;
-  text-align: left;
-  border-bottom: 1px solid #ddd;
-}
-
-th {
-  background-color: var(--primary-color);
-  color: white;
-}
-
-/* ========================================= */
-/* FOOTER                                   */
-/* ========================================= */
-
-footer {
-  background-color: var(--primary-color);
-  color: white;
-  text-align: center;
-  padding: 1rem;
-  margin-top: 2rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-footer a {
-    color: var(--secondary-color);
-    text-decoration: none;
-}
-
-.sociallinks a {
-  margin: 0 5px;
-}
-
-/* ========================================= */
-/* MEDIA QUERIES (Desktop View)             */
-/* ========================================= */
-
-@media (min-width: 768px) {
-  .home-grid, 
-  .contact-grid {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .trip-descriptions {
-    grid-template-columns: 1fr 1fr 1fr;
-  }
-}    border-bottom: 1px solid #ccc;
-}
-
-.company-info address {
-    font-style: normal;
-    line-height: 1.6;
-    margin-top: 1rem;
-}
-
-/* --- Layout Grid (Map & Form) --- */
-.contact-grid {
-    display: grid;
-    grid-template-columns: 1fr; /* Mobile view: 1 column */
-    gap: 2rem;
-    max-width: 1200px;
-    margin: 0 auto 4rem auto;
-    padding: 0 20px;
-}
-
-@media (min-width: 768px) {
-    .contact-grid {
-        grid-template-columns: 1fr 1fr; /* Desktop view: 2 columns */
-        align-items: start;
-    }
-}
-
-/* Map Styling */
-.map-container iframe {
-    border: 1px solid #ccc; /* Styling the iframe border via CSS */
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    width: 100%;
-}
-
-/* Form Styling */
-.contact-form {
-    background-color: #f9f9f9;
-    padding: 2rem;
-    border-radius: 8px;
-    border: 1px solid #eee;
-}
-
-.contact-form h2 {
-    margin-top: 0;
-    margin-bottom: 1.5rem;
-    color: var(--primary-color); 
-    border-bottom: 2px solid #ccc;
     padding-bottom: 10px;
 }
 
-.form-item {
-    margin-bottom: 1.5rem;
+/* --- Navigation (Mobile: Vertical Stack) --- */
+nav ul {
+    display: flex;
+    flex-direction: column; /* Stack menu items vertically on phone */
+    text-align: center;
+    list-style: none;
+    padding: 0;
 }
 
-.contact-form label, 
-.contact-form .label-text {
-    display: block;
-    margin-bottom: 0.5rem;
+nav a {
+    display: block; 
+    padding: 15px;
+    color: var(--accent1-color); 
+    text-decoration: none; 
+    font-family: var(--heading-font);
     font-weight: bold;
-    color: #333;
+    border-bottom: 1px solid rgba(0,0,0,0.1); 
 }
 
-.contact-form input[type="text"],
-.contact-form input[type="email"],
-.contact-form textarea {
+nav a:hover {
+    background-color: rgba(255,255,255,0.2);
+    color: var(--primary-color); 
+}
+
+/* --- Hero Section (Home Page) --- */
+.hero {
+  position: relative;
+}
+
+/* Scoped specifically to Home Page Hero to avoid breaking Contact Page */
+.hero h1 {
+    background-color: var(--accent1-color);
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+    font-family: var(--heading-font);
+}
+
+.hero article {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 1rem;
+  margin: 10px;
+  border-radius: 8px;
+}
+
+.hero article img {
+  float: right;
+  width: 100px; 
+  margin-left: 10px;
+  border: 2px solid var(--primary-color);
+}
+
+/* --- General Typography --- */
+h1, h2, h3 {
+    font-family: var(--heading-font);
+    color: var(--primary-color);
+    text-align: center; 
+}
+
+p, section {
+    margin: 1rem;
+    line-height: 1.5;
+}
+
+header img {
+    display: block;
+    margin: 0 auto;
+    max-width: 120px;
+    padding-top: 10px;
+}
+
+/* --- Contact Page Styles (Mobile) --- */
+form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    margin: 10px;
+}
+
+label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+    color: var(--accent1-color);
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
     width: 100%;
-    padding: 12px;
+    padding: 10px;
+    margin-top: 5px;
     border: 1px solid #ccc;
     border-radius: 4px;
-    box-sizing: border-box; /* Ensures padding doesn't widen element */
-    font-family: inherit;
+    font-family: var(--body-font);
 }
 
-.contact-form textarea {
-    resize: vertical; /* Allows user to resize height only */
+fieldset {
+    margin-top: 20px;
+    border: 1px solid #ccc;
+    padding: 10px;
 }
 
-/* Radio Buttons Styling */
-.radio-group label {
+legend {
+    padding: 0 5px;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.radio-label, .checkbox-label {
     display: block;
     font-weight: normal;
-    margin-bottom: 0.3rem;
+    margin-top: 5px;
     cursor: pointer;
 }
 
-.radio-group input {
-    margin-right: 10px;
-}
-
-/* Checkbox Styling */
-.checkbox-container {
-    margin-top: 1rem;
-}
-
-.checkbox-label {
-    display: flex;
-    align-items: center;
-    font-weight: normal !important;
-    cursor: pointer;
-}
-
-.checkbox-label input {
-    margin-right: 10px;
-    width: auto;
-}
-
-/* Submit Button */
-.submit-btn {
-    background-color: var(--secondary-color); /* Using your existing variable */
+button[type="submit"] {
+    display: block;
+    width: 100%;
+    margin-top: 20px;
+    padding: 15px;
+    background-color: var(--primary-color);
     color: white;
-    padding: 12px 24px;
     border: none;
-    border-radius: 4px;
+    border-radius: 5px;
     font-size: 1.1rem;
     cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: var(--accent1-color);
+}
+
+.map-container iframe {
     width: 100%;
-    transition: background-color 0.3s ease;
+    border: 0; 
+    border-radius: 8px;
+    min-height: 300px;
+    margin-top: 20px;
 }
 
-.submit-btn:hover {
-    background-color: #444; /* Darker shade for hover */
-    opacity: 0.9;
-}
-
-/* --- Employee Section --- */
-.employees {
-    background-color: #eee;
-    padding: 3rem 1rem;
+address {
+    font-style: normal;
+    line-height: 1.6;
     text-align: center;
-    margin-top: 2rem;
+    margin-bottom: 20px;
+}
+
+/* --- Employees Section (Fixed Alignment) --- */
+.employees {
+    margin-top: 50px; 
+    padding: 20px 0;
+    border-top: 1px solid rgba(0,0,0,0.1); 
 }
 
 .employees h2 {
-    margin-bottom: 2rem;
+    text-align: center; 
+    margin-bottom: 30px; 
 }
 
 .employee-row {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 2rem;
-    max-width: 1200px;
-    margin: 0 auto;
+    flex-direction: column; /* Stacked on mobile */
+    align-items: center;
+    gap: 20px;
 }
 
-.employees figure {
-    flex: 1 1 250px; /* Grow, Shrink, Basis */
-    margin: 0;
-    background: white;
-    padding: 1rem;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+.employee-row figure {
+    background-color: #fff;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center; /* Centers text inside card */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    width: 90%;
 }
 
-.employees img {
+.employee-row img {
+    border-radius: 50%;
     width: 150px;
     height: 150px;
-    object-fit: cover; /* Ensures images are not distorted */
-    border-radius: 50%; /* Circular images */
-    margin-bottom: 1rem;
-    border: 3px solid #ccc;
-}
-
-.employees figcaption {
-    font-weight: bold;
-    font-size: 1.1rem;
-    color: #333;
-}
-
-nav a {
-    text-decoration: none;
-    font-weight: bold;
-    /* Optional: make them look like buttons or clean links */
-    color: var(--primary-color); 
-}
-
-/* 2. Fix the Header Layout (The Grid) */
-header {
-    display: grid;
-    /* This creates 3 columns: Logo space, Title space, and Nav space */
-    /* The '1fr' in the middle allows the title to take up the most room */
-    grid-template-columns: auto 1fr auto; 
-    align-items: center;  /* Vertically centers items */
-    padding: 1rem;
-    background-color: var(--secondary-color); /* Or your preferred header color */
-    border-bottom: 1px solid #ccc;
-}
-
-/* 3. Ensure the Logo stays small */
-header img {
-    max-width: 80px; /* Prevents logo from pushing everything over */
-    height: auto;
-}
-
-/* 4. Center the Title explicitly */
-.company-info h1{
-    text-align: center;
-    margin: 0; /* Remove default margins that might push it down */
-    width: 100%;
-    position: static;
-}
-/* ========================================= */
-/* HOME PAGE STYLES                         */
-/* ========================================= */
-
-/* Hero Image Section */
-.hero {
-    position: relative; /* This is the parent for absolute positioning */
-    width: 100%;
-}
-
-.hero img {
-    width: 100%;
-    height: auto;
-    display: block;
-}
-
-/* Positioning the text ON TOP of the image */
-.hero-msg {
-    position: absolute;
-    top: 20%;
-    left: 50%;
-    transform: translate(-50%, -20%);
-    text-align: center;
-    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
-    padding: 20px;
-    border-radius: 10px;
-    width: 80%; /* Width of the text box */
-    max-width: 600px;
-}
-
-.hero-msg h1 {
-    color: white;
-    font-size: 2.5rem;
+    object-fit: cover;
     margin-bottom: 10px;
-    /* IMPORTANT: We reset this to verify it stays inside the hero-msg */
-    position: static; 
 }
 
-.hero-msg p {
-    color: #fff;
-    font-size: 1.2rem;
-}
-
-/* Call to Action Button */
-.call-to-action, .trip-cta {
+/* --- Footer (Improved) --- */
+footer {
+    padding: 40px 20px; /* Increased padding for better spacing */
     text-align: center;
-    margin: 3rem 0;
-    padding: 2rem;
-    background-color: var(--secondary-color); /* Light background */
+    margin-top: 20px;
 }
 
-.cta-btn {
+.socialmedia ul {
+    display: flex;
+    justify-content: center;
+    gap: 30px; 
+    list-style: none;
+    margin-top: 20px;
+}
+
+.socialmedia img {
+    width: 32px; 
+    height: 32px;
+}
+
+/* =========================================
+   DESKTOP VIEW (Media Query)
+   Triggered ONLY when screen is wider than 800px
+   ========================================= */
+@media screen and (min-width: 800px) {
+
+    body {
+        background-color: #f0f0f0; 
+    }
+
+    header, main, footer {
+        max-width: 840px; 
+        border-radius: 5px; 
+    }
+
+    /* Change Nav to Horizontal */
+    nav ul {
+        flex-direction: row; 
+        justify-content: space-around;
+    }
+    
+    nav a {
+        border-bottom: none;
+        padding: 10px;
+    }
+
+    /* --- HOME PAGE HERO (Scoped Overlay) --- */
+    /* This ensures it ONLY affects the Home page hero, not Contact page */
+    .hero h1 {
+        position: absolute;
+        top: 20px;
+        width: 100%;
+        background-color: var(--accent1-color);
+        opacity: 0.9;
+    }
+
+    .hero article {
+        position: absolute;
+        bottom: 20px;
+        right: 20px;
+        width: 70%;
+        margin: 0;
+    }
+    
+    .hero article img {
+        width: 125px; 
+    }
+
+    /* --- CONTACT PAGE GRID --- */
+    .contact-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr; /* 50% Map, 50% Form */
+        gap: 40px;
+        align-items: start;
+        padding: 20px;
+    }
+    
+    address {
+        text-align: left; /* Reset address to left on desktop */
+    }
+
+    /* --- EMPLOYEE ROW --- */
+    .employee-row {
+        flex-direction: row; /* Side-by-side on desktop */
+        justify-content: space-around;
+        align-items: stretch;
+    }
+    
+    .employee-row figure {
+        width: 30%; 
+    }
+}
+
+
+/* =========================================
+   HOME PAGE SPECIFIC STYLES
+   ========================================= */
+
+/* --- CTA Button (Inside Hero) --- */
+.cta-button {
     display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
     background-color: var(--primary-color);
     color: white;
-    padding: 15px 30px;
     text-decoration: none;
-    font-weight: bold;
     border-radius: 5px;
-    margin-top: 1rem;
-    transition: background-color 0.3s;
+    font-weight: bold;
+    text-align: center;
+}
+.cta-button:hover {
+    background-color: var(--accent1-color);
 }
 
-.cta-btn:hover {
-    background-color: #444;
+/* --- Newsletter Section --- */
+.newsletter {
+    background-color: #eee;
+    padding: 20px;
+    text-align: center;
+    border-top: 5px solid var(--secondary-color);
+}
+.newsletter form {
+    max-width: 400px;
+    margin: 0 auto;
+    /* Reuse the white card style from contact page */
+    background: white; 
+    padding: 20px;
+    border-radius: 8px;
 }
 
-/* Home Grid Layout */
+/* --- Home Grid Section (Mobile First: Stacked) --- */
+.home-grid {
+    padding: 20px;
+    text-align: center;
+}
+.grid-item {
+    margin-bottom: 30px;
+    background: white;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+.grid-item img {
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+/* =========================================
+   DESKTOP VIEW UPDATES (Inside media query)
+   Add these INSIDE your @media (min-width: 800px) block
+   ========================================= */
+
+/* --- Home Grid (Desktop: Side-by-Side) --- */
 .home-grid {
     display: grid;
-    grid-template-columns: 1fr; /* Mobile first */
-    gap: 20px;
-    margin: 2rem auto;
-    max-width: 1000px;
-    padding: 0 20px;
-}
-
-.grid-item {
-    text-align: center;
-    border: 1px solid #ddd;
-    padding: 1rem;
-    border-radius: 5px;
-}
-
-.grid-item img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 5px;
-}
-
-/* Newsletter Styles */
-.newsletter {
-    background-color: var(--primary-color);
-    color: white;
-    padding: 2rem;
-    text-align: center;
-    margin-top: 2rem;
-}
-
-.newsletter-grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
-    margin-top: 1rem;
-}
-
-.newsletter input {
-    padding: 10px;
-    border: none;
-    border-radius: 4px;
-}
-
-.newsletter button {
-    padding: 10px 20px;
-    border: none;
-    background-color: var(--secondary-color);
-    color: #333;
-    font-weight: bold;
-    cursor: pointer;
-    border-radius: 4px;
-}
-
-/* ========================================= */
-/* TRIPS PAGE STYLES                        */
-/* ========================================= */
-
-/* Trip Descriptions Grid */
-.trip-descriptions {
-    display: grid;
-    grid-template-columns: 1fr;
+    /* This creates 2 equal columns */
+    grid-template-columns: 1fr 1fr; 
     gap: 30px;
-    max-width: 1200px;
-    margin: 2rem auto;
-    padding: 0 20px;
 }
 
-.trip-card {
-    border: 1px solid #ccc;
-    padding: 15px;
+/* Spans the title across both columns so it stays centered at the top */
+.home-grid h2 {
+    grid-column: 1 / -1; 
+    margin-bottom: 20px;
+}
+
+/* =========================================
+   TRIPS PAGE STYLES
+   ========================================= */
+
+/* --- Top CTA Section --- */
+.trip-cta {
     text-align: center;
+    padding: 30px;
+    background-color: #fff;
+    border-bottom: 2px solid var(--secondary-color);
+}
+.trip-cta p {
+    margin-bottom: 20px;
+}
+
+/* --- Trip Cards (Mobile Default) --- */
+.trip-grid {
+    padding: 20px;
+}
+.trip-card {
+    background: white;
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #ddd;
     border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
-
 .trip-card img {
-    width: 100%;
-    height: 250px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    max-height: 200px;
     object-fit: cover;
-    margin-bottom: 1rem;
+    width: 100%;
 }
 
-/* Trips Table Styles */
-.trips-table-section {
-    max-width: 800px;
-    margin: 3rem auto;
-    padding: 0 20px;
-    overflow-x: auto; /* Handles scroll on small screens */
+/* --- Table Styles --- */
+.trip-table-section {
+    padding: 20px;
+    overflow-x: auto; /* Allows table to scroll sideways on very small phones */
 }
-
 table {
     width: 100%;
     border-collapse: collapse;
-    margin-top: 1rem;
+    margin-top: 10px;
+    background-color: white;
 }
-
 th, td {
     padding: 12px;
     text-align: left;
     border-bottom: 1px solid #ddd;
 }
-
 th {
     background-color: var(--primary-color);
     color: white;
+    font-family: var(--heading-font);
 }
-
+/* Zebra striping for readability */
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
 tr:hover {
-    background-color: #f5f5f5;
+    background-color: #ddd; /* Highlight row on mouse over */
 }
 
-/* ========================================= */
-/* RESPONSIVE QUERIES (Desktop)             */
-/* ========================================= */
-@media (min-width: 768px) {
-    /* Home Grid becomes 2 columns */
-    .home-grid {
-        grid-template-columns: 1fr 1fr;
-    }
-    
-    /* Trips Grid becomes 3 columns */
-    .trip-descriptions {
-        grid-template-columns: 1fr 1fr 1fr;
-    }
+
+/* =========================================
+   DESKTOP VIEW UPDATES (Inside existing media query)
+   Add these INSIDE your @media (min-width: 800px) block
+   ========================================= */
+
+/* --- Trip Grid (3 Columns) --- */
+.trip-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Creates 3 equal columns */
+    gap: 20px;
+}
+
+/* --- Table Adjustments --- */
+.trip-table-section {
+    padding: 40px; /* More space on desktop */
+}
+th, td {
+    text-align: center; /* Center align table text on big screens */
 }
 
